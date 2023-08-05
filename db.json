@@ -1,0 +1,68 @@
+{
+    "cars": [{
+            "id": 1,
+            "manufacturer": "Nissan",
+            "model": "Teana",
+            "fuel": "Petrol",
+            "engine": "2500cc",
+            "mileage": "42,000 kms",
+            "year": "2013",
+            "image_url": "https://i.ibb.co/wQ4G0w1/flatiron-brew.png",
+            "reviews": [
+                "It's flat! Just the way I like it!!"
+            ]
+        },
+        {
+            "id": 2,
+            "manufacturer": "Volkswagen",
+            "model": "Golf",
+            "fuel": "Petrol",
+            "engine": "1400cc Turbo",
+            "mileage": "62,000 kms",
+            "year": "2013",
+            "image_url": "https://i.ibb.co/wQ4G0w1/flatiron-brew.png",
+            "reviews": [
+                "It's flat! Just the way I like it!!"
+            ]
+        },
+        {
+            "id": 3,
+            "manufacturer": "Suzuki",
+            "model": "Swift",
+            "fuel": "Petrol",
+            "engine": "1300cc",
+            "mileage": "86,000 kms",
+            "year": "2014",
+            "image_url": "https://i.ibb.co/wQ4G0w1/flatiron-brew.png",
+            "reviews": [
+                "It's flat! Just the way I like it!!"
+            ]
+        },
+        {
+            "id": 4,
+            "manufacturer": "Toyota",
+            "model": "Belta",
+            "fuel": "Petrol",
+            "engine": "1000cc",
+            "mileage": "25,000 kms",
+            "year": "2008",
+            "image_url": "https://i.ibb.co/wQ4G0w1/flatiron-brew.png",
+            "reviews": [
+                "It's flat! Just the way I like it!!"
+            ]
+        },
+        {
+            "id": 5,
+            "manufacturer": "Mitsubishi",
+            "model": "Lancer",
+            "fuel": "Petrol",
+            "engine": "1500cc",
+            "mileage": "38,000 kms",
+            "year": "2005",
+            "image_url": "https://i.ibb.co/wQ4G0w1/flatiron-brew.png",
+            "reviews": [
+                "It's flat! Just the way I like it!!"
+            ]
+        }
+    ]
+}

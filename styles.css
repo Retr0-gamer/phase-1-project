@@ -37,11 +37,13 @@
     #car-name {
         text-align: right;
         color: white;
-        padding-right: 200px;
+        padding-right: 150px;
     }
     
     #motto>ul {
         font-size: xx-large;
+        font-style: italic;
+        font-family: 'Courier New', Courier, monospace;
         display: flex;
         justify-content: space-between;
         list-style-type: none;
@@ -57,6 +59,7 @@
         justify-content: space-between;
         padding-right: 50px;
         color: burlywood;
+        border-bottom: #ff914d solid;
     }
     
     #bottom ul {
@@ -129,4 +132,17 @@
     
     .table-content {
         color: white;
+    }
+    
+    .titles {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-right: 120px;
+    }
+    
+    #vehicle-details {
+        margin-right: 15%;
     }
