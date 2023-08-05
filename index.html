@@ -9,22 +9,82 @@
 </head>
 
 <body>
-    <header>
-        <img id="logo" alt="Pro Autotech" src="Assets/motorHubLogo.png" />
-    </header>
-    <main>
-        <nav id="car-list">
+    <header id="top"><img id="logo" alt="Salim Motor Hub" src="Assets/motorHubLogo.png" />
+        <nav id="motto">
             <ul>
-                <li>GOLF</li>
-                <li>TEANA</li>
-                <li>SWIFT</li>
+                <li>BUY</li>
+                <li>CRUISE</li>
+                <li>SMILE</li>
             </ul>
         </nav>
-        <div>
-            <h2 id="car-name">VW GOLF TSI 2014</h2>
-            <img id="car-image" alt="car photo" src="Assets/golf.jpg" /> </div>
-    </main>
-    <script type="text" src="index.js"></script>
+        <input type="search" name="search" placeholder="Search make or model..."></header>
+    <header id="middle">
+        <h2>AVAILABLE STOCK</h2>
+        <div id="image-and-details">
+            <nav>
+                <ul id="car-list">
+                    <li>TEANA</li>
+                    <li>GOLF</li>
+                    <li>SWIFT</li>
+                    <li>BELTA</li>
+                    <li>COLT</li>
+                </ul>
+            </nav>
+            <table id="table">
+                <tr class="table-heading">
+                    <th>Model & Manufacturer</th>
+                    <th>CC & Fuel Type</th>
+                    <th>Mileage & YOM</th>
+                </tr>
+                <tr class="table-content">
+                    <td>Voltswagen</td>
+                    <td>1400cc </td>
+                    <td>40,000kms</td>
+                </tr>
+                <tr class="table-content">
+                    <td>Golf</td>
+                    <td>Petrol</td>
+                    <td>2014</td>
+                </tr>
+            </table>
+            <img id="car-image" src="Assets/golf.jpg" alt="Golf"></div>
+        <h2 id="car-name">VW GOLF 2014</h2>
+    </header>
+    <header id="reviews">
+        <h3>Customer Reviews</h3>
+        <ul id="review-list">
+            <li>Replace with actual reviews</li>
+        </ul>
+        <form id="review-form">
+            <label id="your-review" for="review">Give us your thoughts:</label>
+            <textarea id="review"></textarea>
+            <button type="submit">That's what I think!</button>
+        </form>
+        </div>
+    </header>
+    <header id="bottom">
+        <nav id="company-details-nav">
+            <ul id="small-text">
+                <li>Phone number
+                    <ul>
+                        <li class="small-text">0722123456</li>
+                    </ul>
+                    </il>
+                    <li>email
+                        <ul>
+                            <li class="small-text">salim@motorhub.co.ke</li>
+                        </ul>
+                    </li>
+                    <li>Showroom Location
+                        <ul>
+                            <li class="small-text">Mombasa</li>
+                        </ul>
+                    </li>
+            </ul>
+        </nav>
+    </header>
+    <script type="text" src="index.js">
+    </script>
 </body>
 
 </html>
