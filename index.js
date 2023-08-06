@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             reviewList.innerHTML = '';
                             carData.reviews.forEach(function(review) {
                                 const li = document.createElement('li');
-                                li.textcontent = review;
+                                li.textContent = review;
                                 reviewList.appendChild(li);
                             });
 
@@ -69,6 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     .then((resposeData) => (resposeData))
                     .catch((error) => (error));
             });
+            reviewList.innerHTML = '';
             carData.reviews.forEach(function(review) {
                 const li = document.createElement('li');
                 li.textContent = review;
