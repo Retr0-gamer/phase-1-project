@@ -146,3 +146,13 @@
     #vehicle-details {
         margin-right: 15%;
     }
+    
+    #car-list-nav ul li:hover {
+        background-color: #f1a458;
+        color: black;
+    }
+    
+    #car-list-nav ul li {
+        padding: 5px;
+        cursor: pointer;
+    }

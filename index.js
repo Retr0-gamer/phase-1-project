@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const beerId = currentDisplayCarId;
                 const reviewData = { review: newreview };
 
-                fetch(`${carsApi}/${beerId}/reviews`, {
+                fetch(`${carsApi}/${carId}/reviews`, {
                         method: 'POST',
                         headers: {
                             'Content-type': 'application/json'
