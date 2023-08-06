@@ -1,0 +1,73 @@
+{
+    "cars": [{
+            "id": 1,
+            "name": "Teana",
+            "manufacturer": "Nissan",
+            "model": "Teana",
+            "fuel": "Petrol",
+            "engine": "2500cc",
+            "mileage": "42,000 kms",
+            "year": "2013",
+            "image_url": "https://i.ibb.co/8cXtcfv/teana.jpg",
+            "reviews": [
+                "Rides like a dream!!"
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Golf",
+            "manufacturer": "Volkswagen",
+            "model": "Golf",
+            "fuel": "Petrol",
+            "engine": "1400cc Turbo",
+            "mileage": "62,000 kms",
+            "year": "2013",
+            "image_url": "https://i.ibb.co/Lk7XMD1/golf.jpg",
+            "reviews": [
+                "Pocket rocket!!"
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Swift",
+            "manufacturer": "Suzuki",
+            "model": "Swift",
+            "fuel": "Petrol",
+            "engine": "1300cc",
+            "mileage": "86,000 kms",
+            "year": "2014",
+            "image_url": "https://i.ibb.co/QCzRYjZ/swift.jpg",
+            "reviews": [
+                "Good for city cruising"
+            ]
+        },
+        {
+            "id": 4,
+            "name": "Belta",
+            "manufacturer": "Toyota",
+            "model": "Belta",
+            "fuel": "Petrol",
+            "engine": "1000cc",
+            "mileage": "25,000 kms",
+            "year": "2008",
+            "image_url": "https://i.ibb.co/c2J4hH9/belta.jpg",
+            "reviews": [
+                "Get's you from A to B...efficiently"
+            ]
+        },
+        {
+            "id": 5,
+            "name": "Lancer",
+            "manufacturer": "Mitsubishi",
+            "model": "Lancer",
+            "fuel": "Petrol",
+            "engine": "1500cc",
+            "mileage": "38,000 kms",
+            "year": "2005",
+            "image_url": "https://i.ibb.co/xgx6CyQ/lancer.jpg",
+            "reviews": [
+                "Defenition of reliability!"
+            ]
+        }
+    ]
+}
