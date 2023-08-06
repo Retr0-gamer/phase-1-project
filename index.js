@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const carNameElement = document.getElementById('car-name');
     const carImageElement = document.getElementById('car-image');
     const reviewList = document.getElementById('review-list');
+    const carTableBody = document.querySelector('#table tbody');
     carList.innerHTML = '';
 
     fetch(carsApi)
@@ -77,4 +78,44 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         })
         .catch((error) => (error));
+
+    carTableBody.innerHTML = '';
+
+    fetch(carsApi)
+        .then((response) => response.json())
+        .then(function(cars) {
+            cars.forEach(function(car) {
+                const tr = document.createElement('tr');
+
+
+                const manufacturerTd = document.createElement('td');
+                manufacturerTd.textContent = car.manufacturer;
+                tr.appendChild(manufacturerTd);
+
+                const modelTd = document.createElement('td');
+                modelTd.textContent = car.model;
+                tr.appendChild(modelTd);
+
+                const fuelTypeTd = document.createElement('td');
+                fuelTypeTd.textContent = car.fuel;
+                tr.appendChild(fuelTypeTd);
+
+                const engineSizeTd = document.createElement('td');
+                engineSizeTd.textContent = car.engine;
+                tr.appendChild(engineSizeTd);
+
+                const mileageTd = document.createElement('td');
+                mileageTd.textContent = car.mileage;
+                tr.appendChild(mileageTd);
+
+                const yearTd = document.createElement('td');
+                yearTd.textContent = car.year;
+                tr.appendChild(yearTd);
+
+                carTableBody.appendChild(tr);
+            })
+
+
+        })
+        .catch((error) => (error))
 })
