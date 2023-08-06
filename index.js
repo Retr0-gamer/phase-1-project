@@ -81,54 +81,40 @@ document.addEventListener('DOMContentLoaded', function() {
 
     carTableBody.innerHTML = '';
 
-    function populateTable(carData) {
+    const tr = document.createElement('tr');
+    carTableBody.appendChild(tr);
 
-        const manufacturerTd = document.createElement('td');
-        manufacturerTd.textContent = carData.manufacturer;
-        tr.appendChild(manufacturerTd);
+    function updateDisplayedCar(carId) {
+        currentDisplayCarId = carId;
+        const carData = carDataList.find((car) => car.id === carId);
+        if (carData) {
+            populateTableWithData(carData);
+        } else {
+            console.error(`Car with ID ${carId} not found.`);
+        }
+    }
 
-        const modelTd = document.createElement('td');
-        modelTd.textContent = carData.model;
-        tr.appendChild(modelTd);
-
-        const fuelTd = document.createElement('td');
-        fuelTd.textContent = carData.fuel;
-        tr.appendChild(fuelTd);
-
-        const engineTd = document.createElement('td');
-        engineTd.textContent = carData.engine;
-        tr.appendChild(engineTd);
-
-        const mileageTd = document.createElement('td');
-        mileageTd.textContent = carData.mileage;
-        tr.appendChild(mileageTd);
-
-
-        const yearTd = document.createElement('td');
-        yearTd.textContent = carData.year;
-        tr.appendChild(yearTd);
-
-        const nameTd = document.createElement('td');
-        nameTd.textContent = carData.name;
-        tr.appendChild(nameTd);
-        carTableBody.appendChild(tr);
+    function handleCarListItemClick(carId) {
+        updateDisplayedCar(carId);
     }
     fetch(carsApi)
         .then((response) => response.json())
         .then(function(cars) {
+            carDataList = cars;
+            const carList = document.getElementById('car-list');
             cars.forEach(function(car) {
                 const li = document.createElement('li');
                 li.textContent = car.name;
 
                 li.addEventListener('click', function() {
-                    fetch(`${carsApi}/${car.id}`)
-                        .then((response) => response.json())
-                        .then(function(carData) {
-                            populateTable(carData);
-                        })
-                        .catch((error) => (error));
+                    handleCarListItemClick(car.id);
                 });
+
+                carList.appendChild(li);
             });
+            updateDisplayedCarpdateDisplayedCar(currentDisplayCarId);
         })
         .catch((error) => console.error(error));
+
+
 });
