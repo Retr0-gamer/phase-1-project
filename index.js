@@ -79,43 +79,60 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .catch((error) => (error));
 
-    carTableBody.innerHTML = '';
+    function clearTable() {
+        carTableBody.innerHTML = '';
+    }
 
+    function populateTable(carData) {
+        clearTable();
+        const tr = document.createElement('tr');
+
+        const manufacturerTd = document.createElement('td');
+        manufacturerTd.textContent = carData.manufacturer;
+        tr.appendChild(manufacturerTd);
+
+        const modelTd = document.createElement('td');
+        modelTd.textContent = carData.model;
+        tr.appendChild(modelTd);
+
+        const fuelTd = document.createElement('td');
+        fuelTd.textContent = carData.fuel;
+        tr.appendChild(fuelTd);
+
+        const engineTd = document.createElement('td');
+        engineTd.textContent = carData.engine;
+        tr.appendChild(engineTd);
+
+        const mileageTd = document.createElement('td');
+        mileageTd.textContent = carData.mileage;
+        tr.appendChild(mileageTd);
+
+
+        const yearTd = document.createElement('td');
+        yearTd.textContent = carData.year;
+        tr.appendChild(yearTd);
+
+        const nameTd = document.createElement('td');
+        nameTd.textContent = carData.name;
+        tr.appendChild(nameTd);
+        carTableBody.appendChild(tr);
+    }
     fetch(carsApi)
         .then((response) => response.json())
         .then(function(cars) {
             cars.forEach(function(car) {
-                const tr = document.createElement('tr');
+                const li = document.createElement('li');
+                li.textContent = car.name;
 
-
-                const manufacturerTd = document.createElement('td');
-                manufacturerTd.textContent = car.manufacturer;
-                tr.appendChild(manufacturerTd);
-
-                const modelTd = document.createElement('td');
-                modelTd.textContent = car.model;
-                tr.appendChild(modelTd);
-
-                const fuelTypeTd = document.createElement('td');
-                fuelTypeTd.textContent = car.fuel;
-                tr.appendChild(fuelTypeTd);
-
-                const engineSizeTd = document.createElement('td');
-                engineSizeTd.textContent = car.engine;
-                tr.appendChild(engineSizeTd);
-
-                const mileageTd = document.createElement('td');
-                mileageTd.textContent = car.mileage;
-                tr.appendChild(mileageTd);
-
-                const yearTd = document.createElement('td');
-                yearTd.textContent = car.year;
-                tr.appendChild(yearTd);
-
-                carTableBody.appendChild(tr);
-            })
-
-
+                li.addEventListener('click', function() {
+                    fetch(`${carsApi}/${car.id}`)
+                        .then((response) => response.json())
+                        .then(function(carData) {
+                            populateTable(carData);
+                        })
+                        .catch((error) => (error));
+                });
+            });
         })
-        .catch((error) => (error))
-})
+        .catch((error) => console.error(error));
+});
