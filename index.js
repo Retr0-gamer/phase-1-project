@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
             carNameElement.textContent = carData.name;
             carImageElement.src = carData.image_url;
 
-            reviewForm.addEventListener('submit', function() {
+            reviewForm.addEventListener('submit', function(event) {
                 event.preventDefault();
                 const reviewTextarea = document.getElementById('review');
                 const newReview = reviewTextarea.value;
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 li.textContent = newReview;
                 reviewList.appendChild(li);
                 reviewTextarea.value = '';
-                const beerId = currentDisplayCarId;
+                const carId = currentDisplayCarId;
                 const reviewData = { review: newreview };
 
                 fetch(`${carsApi}/${carId}/reviews`, {
@@ -66,9 +66,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     .then((response) => response.json())
                     .then((resposeData) => (resposeData))
                     .catch((error) => (error));
-            })
+            });
             reviewList.innerHTML = '';
-            beerData.reviews.forEach(function(review) {
+            carData.reviews.forEach(function(review) {
                 const li = document.createElement('li');
                 li.textContent = review;
                 reviewList.appendChild(li);
