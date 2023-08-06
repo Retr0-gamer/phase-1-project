@@ -79,13 +79,9 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .catch((error) => (error));
 
-    function clearTable() {
-        carTableBody.innerHTML = '';
-    }
+    carTableBody.innerHTML = '';
 
     function populateTable(carData) {
-        clearTable();
-        const tr = document.createElement('tr');
 
         const manufacturerTd = document.createElement('td');
         manufacturerTd.textContent = carData.manufacturer;
