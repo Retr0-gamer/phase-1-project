@@ -78,6 +78,7 @@
         border-top: #ff914d;
         border-style: solid;
         border-width: 3px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
     
     #image-and-details {
@@ -171,4 +172,8 @@
         color: black;
         padding: 7px 10px;
         cursor: pointer;
+    }
+    
+    .small-text {
+        color: #ff914d;
     }
