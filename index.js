@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 reviewList.appendChild(li);
                 reviewTextarea.value = '';
                 const carId = currentDisplayCarId;
-                const reviewData = { review: newreview };
+                const reviewData = { review: newReview };
 
                 fetch(`${carsApi}/${carId}/reviews`, {
                         method: 'POST',
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const li = document.createElement('li');
                 li.textContent = review;
                 reviewList.appendChild(li);
-            })
+            });
         })
         .catch((error) => (error));
 })
