@@ -9,7 +9,9 @@
             "mileage": "42,000 kms",
             "year": "2013",
             "image_url": "https://i.ibb.co/8cXtcfv/teana.jpg",
-            "reviews": "Rides like a dream!!"
+            "reviews": [
+                "Rides like a dream!!"
+            ]
         },
         {
             "id": 2,
@@ -21,7 +23,9 @@
             "mileage": "62,000 kms",
             "year": "2013",
             "image_url": "https://i.ibb.co/Lk7XMD1/golf.jpg",
-            "reviews": "Pocket rocket!!"
+            "reviews": [
+                "Pocket rocket!!"
+            ]
         },
         {
             "id": 3,
@@ -33,7 +37,9 @@
             "mileage": "86,000 kms",
             "year": "2014",
             "image_url": "https://i.ibb.co/QCzRYjZ/swift.jpg",
-            "reviews": "Good for city cruising"
+            "reviews": [
+                "Good for city cruising"
+            ]
         },
         {
             "id": 4,
@@ -45,7 +51,9 @@
             "mileage": "25,000 kms",
             "year": "2008",
             "image_url": "https://i.ibb.co/c2J4hH9/belta.jpg",
-            "reviews": "Get's you from A to B...efficiently"
+            "reviews": [
+                "Get's you from A to B...efficiently"
+            ]
         },
         {
             "id": 5,
@@ -57,7 +65,9 @@
             "mileage": "38,000 kms",
             "year": "2005",
             "image_url": "https://i.ibb.co/xgx6CyQ/lancer.jpg",
-            "reviews": "Defenition of reliability!"
+            "reviews": [
+                "Defenition of reliability!"
+            ]
         }
     ]
 }

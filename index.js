@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
         .then((response) => response.json())
         .then(function(cars) {
             cars.forEach(function(car) {
-                const li = document.createElement('li')
+                const li = document.createElement('li');
                 li.textContent = car.name;
 
                 li.addEventListener('click', function() {
@@ -43,6 +43,8 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(function(carData) {
             carNameElement.textContent = carData.name;
             carImageElement.src = carData.image_url;
+
+            const reviewForm = document.getElementById('review-form')
 
             reviewForm.addEventListener('submit', function(event) {
                 event.preventDefault();
