@@ -81,40 +81,41 @@ document.addEventListener('DOMContentLoaded', function() {
 
     carTableBody.innerHTML = '';
 
-    const tr = document.createElement('tr');
-    carTableBody.appendChild(tr);
-
-    function updateDisplayedCar(carId) {
-        currentDisplayCarId = carId;
-        const carData = carDataList.find((car) => car.id === carId);
-        if (carData) {
-            populateTableWithData(carData);
-        } else {
-            console.error(`Car with ID ${carId} not found.`);
-        }
-    }
-
-    function handleCarListItemClick(carId) {
-        updateDisplayedCar(carId);
-    }
     fetch(carsApi)
         .then((response) => response.json())
         .then(function(cars) {
-            carDataList = cars;
-            const carList = document.getElementById('car-list');
             cars.forEach(function(car) {
-                const li = document.createElement('li');
-                li.textContent = car.name;
+                const tr = document.createElement('tr');
 
-                li.addEventListener('click', function() {
-                    handleCarListItemClick(car.id);
-                });
 
-                carList.appendChild(li);
-            });
-            updateDisplayedCarpdateDisplayedCar(currentDisplayCarId);
+                const manufacturerTd = document.createElement('td');
+                manufacturerTd.textContent = car.manufacturer;
+                tr.appendChild(manufacturerTd);
+
+                const modelTd = document.createElement('td');
+                modelTd.textContent = car.model;
+                tr.appendChild(modelTd);
+
+                const fuelTypeTd = document.createElement('td');
+                fuelTypeTd.textContent = car.fuel;
+                tr.appendChild(fuelTypeTd);
+
+                const engineSizeTd = document.createElement('td');
+                engineSizeTd.textContent = car.engine;
+                tr.appendChild(engineSizeTd);
+
+                const mileageTd = document.createElement('td');
+                mileageTd.textContent = car.mileage;
+                tr.appendChild(mileageTd);
+
+                const yearTd = document.createElement('td');
+                yearTd.textContent = car.year;
+                tr.appendChild(yearTd);
+
+                carTableBody.appendChild(tr);
+            })
+
+
         })
-        .catch((error) => console.error(error));
-
-
-});
+        .catch((error) => (error))
+})
