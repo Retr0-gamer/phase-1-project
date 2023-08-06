@@ -69,7 +69,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     .then((resposeData) => (resposeData))
                     .catch((error) => (error));
             });
-            reviewList.innerHTML = '';
             carData.reviews.forEach(function(review) {
                 const li = document.createElement('li');
                 li.textContent = review;
