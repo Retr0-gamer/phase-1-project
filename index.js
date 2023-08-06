@@ -1,4 +1,4 @@
-const carsApi = "https://salim-motor-hub.onrender.com"
+const carsApi = "https://salim-motor-hub.onrender.com/cars"
 
 let currentDisplayCarId = 1;
 
