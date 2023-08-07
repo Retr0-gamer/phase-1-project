@@ -1,5 +1,5 @@
 project for phase 1;
-A showroom website with car details, images, review sections, search bar.
+A showroom website that featurs car details, images, review sections, search bar. It also changes the photos, car name and customer reviews respective to the selection from the car list.
 
 The db.json file is hosted on render as per the suggestion from the template from canvas. The service is live and running.
 
