@@ -4,7 +4,7 @@ Project for phase 1 by Salim Omar;
 A showroom website that featurs car details, images, review sections, search bar. It also shows the car name, image and customer reviews respective to the car selected from the car list.
 
 
-Reviews can be added to every individual car along side the default review.
+Reviews can be added to every individual car along side the default review by other customers.
 
 The db.json file is hosted on render as per the suggestion from the template from canvas. The service is live and running.
 
